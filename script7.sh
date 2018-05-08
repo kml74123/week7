@@ -14,3 +14,5 @@ ls /etc/init
 echo 'checking systemctl'
 sudo systemctl list-units
 
+echo 'checking the status service'
+systemctl status sshd.service
