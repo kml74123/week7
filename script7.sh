@@ -1,15 +1,16 @@
 #!/bin/bash
 
+echo 'looking at the system'
 
+echo 'see where we at'
+pwd
 
-logger -p daemon.info something bad just happend.
+echo 'checking the system config'
+ls /usr/lib/systemd /etc/systemd
 
-echo "system clock in second"
-date +%s
+echo 'next look at the init conf'
+ls /etc/init
 
-echo "display the date and time"
-export tz=us/centeral
-date
+echo 'checking systemctl'
+sudo systemctl list-units
 
-ps -eo pid,euser,ruser,comm | less
-echo 'showing process ownership"
